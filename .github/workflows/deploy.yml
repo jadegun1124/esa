@@ -30,9 +30,9 @@ jobs:
           cp index.html 404.html styles.css favicon.svg .nojekyll _site/
 
       - name: Setup Pages
+        id: pages
+        continue-on-error: true
         uses: actions/configure-pages@v5
-        with:
-          enablement: true
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
